@@ -1,19 +1,9 @@
 {
-  "name": "manga-publishing",
+  "name": "manga-app",
   "version": "1.0.0",
-  "description": "Comic Publishing Management Web App",
-  "private": true,
-  "workspaces": [
-    "frontend",
-    "backend"
-  ],
   "scripts": {
-    "dev": "concurrently \"npm run dev -w frontend\" \"npm run dev -w backend\"",
-    "build": "npm run build -w frontend && npm run build -w backend",
-    "start": "npm start -w backend",
-    "install:all": "npm install && npm install -w frontend && npm install -w backend"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.0"
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix frontend run start"
   }
 }

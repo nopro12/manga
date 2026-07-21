@@ -1,90 +1,125 @@
-# Comic Publishing Management Web App
+# Manga Comic Publishing Platform
 
-A modern platform for publishing, discovering, and reading manga/comics online.
+> A modern web platform for publishing, reading, and discovering manga & comics
 
-## Features
+[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnopro12%2Fmanga&project-name=manga-app&repository-name=manga)
 
-### 👥 User Roles
-- **Readers**: Browse, read, and manage favorite comics
-- **Authors**: Create series, upload chapters, submit for review
-- **Editors**: Review and publish content
-- **Admins**: Manage users and system permissions
+## 🌟 Features
 
-## Tech Stack
+✅ **User Authentication** - Register, login with JWT  
+✅ **Comic Publishing** - Authors can create and publish series  
+✅ **Editorial System** - Editors review and approve content  
+✅ **Reader Experience** - Browse, search, read comics  
+✅ **User Dashboard** - Track reading history, favorites  
+✅ **Admin Panel** - Manage users and content  
+✅ **Mobile Responsive** - Works on all devices  
+✅ **Modern UI** - Built with Tailwind CSS  
 
-- **Frontend**: Next.js + Tailwind CSS
-- **Backend**: Node.js + Express
-- **Database**: MongoDB
+## 🚀 Quick Start (Deploy in 5 minutes)
+
+### Frontend Deploy (Vercel)
+
+1. Click the button above or visit: https://vercel.com/new
+2. Select your GitHub repository
+3. Vercel detects Next.js automatically
+4. Click "Deploy"
+5. Done! ✅
+
+### Backend Deploy (Railway)
+
+1. Visit: https://railway.app
+2. Click "New Project" → "Deploy from GitHub"
+3. Select `nopro12/manga` repository
+4. Add Environment Variables:
+   ```
+   MONGODB_URI=<your-mongodb-connection-string>
+   JWT_SECRET=<your-secret-key>
+   NODE_ENV=production
+   ```
+5. Click Deploy
+6. Copy Backend URL and add to Vercel:
+   ```
+   NEXT_PUBLIC_API_URL=<your-railway-url>
+   ```
+
+**Full deployment guide:** See [DEPLOY.md](./DEPLOY.md)
+
+## 📚 Tech Stack
+
+### Frontend
+- **Framework**: Next.js 14 (React)
+- **Styling**: Tailwind CSS
 - **Deployment**: Vercel
 
-## Project Structure
+### Backend
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Database**: MongoDB
+- **Auth**: JWT
+- **Deployment**: Railway/Render
+
+## 📁 Project Structure
 
 ```
-.
-├── frontend/           # Next.js application
-├── backend/            # Express API server
-└── docs/               # Documentation
+manga/
+├── frontend/          # Next.js app
+│   ├── app/          # Pages & routes
+│   ├── components/   # React components
+│   └── public/       # Static files
+├── backend/          # Express API
+│   └── src/
+│       ├── routes/   # API endpoints
+│       ├── models/   # MongoDB schemas
+│       └── middleware/
+├── docs/            # Documentation
+└── DEPLOY.md        # Deployment guide
 ```
 
-## Getting Started
+## 📖 Documentation
 
-### Prerequisites
-- Node.js (v18+)
-- npm or yarn
-- MongoDB
+- **[DEPLOY.md](./DEPLOY.md)** - Quick deployment guide
+- **[docs/SETUP.md](./docs/SETUP.md)** - Local development setup
+- **[docs/API.md](./docs/API.md)** - API documentation
+- **[docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)** - System architecture
+- **[docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md)** - Contributing guidelines
+- **[docs/ROADMAP.md](./docs/ROADMAP.md)** - Development roadmap
 
-### Installation
+## 👥 User Roles
 
-```bash
-# Clone repository
-git clone https://github.com/nopro12/manga.git
-cd manga
+| Role | Permissions |
+|------|-------------|
+| **Reader** | Browse, read, favorite comics |
+| **Author** | Create series, upload chapters, submit for review |
+| **Editor** | Review submissions, approve/reject content |
+| **Admin** | Full access, manage users, view analytics |
 
-# Install dependencies
-npm install
+## 🔐 Security
 
-# Setup environment variables
-cp .env.example .env.local
+- JWT token authentication
+- Bcrypt password hashing
+- CORS protection
+- Input validation
+- Environment variables for secrets
 
-# Start development server
-npm run dev
-```
+## 🚀 Deployment Checklist
 
-## Development Plan
+- [ ] Create MongoDB Atlas account
+- [ ] Deploy frontend to Vercel
+- [ ] Deploy backend to Railway
+- [ ] Add environment variables
+- [ ] Connect frontend & backend URLs
+- [ ] Test user registration
+- [ ] Test comic creation & reading
+- [ ] Test admin features
 
-### Sprint 1: Authentication
-- User registration
-- User login
-- Password encryption
+## 💬 Support
 
-### Sprint 2: Reader Features
-- Browse comics
-- View comic details
+Have questions? Check [DEPLOY.md](./DEPLOY.md) for troubleshooting or open an issue on GitHub.
 
-### Sprint 3: Reading
-- Read chapters
-- Save reading history
+## 📄 License
 
-### Sprint 4: Favorites
-- Bookmark comics
+MIT License - feel free to use for your projects!
 
-### Sprint 5: Author Tools
-- Create series
-- Upload chapters
-- Submit for review
+---
 
-### Sprint 6: Editorial
-- Review submissions
-- Approve/Reject
-
-### Sprint 7: Publishing
-- Schedule publication
-- Send notifications
-
-### Sprint 8: Admin
-- User management
-- Role assignment
-
-## License
-
-MIT
+**Ready to deploy?** Follow [DEPLOY.md](./DEPLOY.md) for step-by-step instructions.
